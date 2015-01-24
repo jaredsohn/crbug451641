@@ -1,0 +1,32 @@
+{
+    "description": "Extension to test page action icons",
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*.netflix.com/*",
+                "https://*.netflix.com/*"
+            ],
+            "all_frames": false,
+            "js": [
+                "src/contentscript/start.js"
+            ],
+            "css": [],
+            "run_at": "document_start"
+        }
+    ],
+    "icons": {
+        "64": "src/img/favicon_64.png"
+    },
+    "background": {
+        "scripts": ["src/js/background.js"]
+    },
+    "page_action": {
+        "default_icon": {
+            "19": "src/img/favicon_19.png"
+        },
+        "default_title": "Page Action Test"
+    },
+    "version": "2.2",
+    "manifest_version": 2,
+    "name": "Page Action Test"
+}
